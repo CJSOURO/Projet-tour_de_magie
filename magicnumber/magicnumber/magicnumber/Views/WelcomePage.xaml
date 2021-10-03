@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:views="clr-namespace:magicnumber.Views"
+             x:Class="magicnumber.Views.WelcomePage">
+    <ContentPage.Content>
+        <StackLayout Spacing="0">
+            <views:StarsView />
+
+            <StackLayout VerticalOptions="CenterAndExpand">
+                <Label Text="Tour de magie"
+                   TextColor="{StaticResource titleColor}"
+                   FontSize="50"  
+                   HorizontalOptions="Center"/>
+
+                <Button x:Name="play_magic_number_button" 
+                    BackgroundColor="{StaticResource shadowColor}" 
+                    Text="Magicien" 
+                    TextColor="White"
+                    Margin="0,20,0,0"
+                    WidthRequest="150"
+                    HorizontalOptions="Center"
+                    Clicked="Play_Magic_Number_Game_Button" />
+
+                <Button x:Name="play_miss_number_button" 
+                    BackgroundColor="{StaticResource shadowColor}" 
+                    Text="Visiteur" 
+                    TextColor="White"
+                    Margin="0,30,0,0"
+                    WidthRequest="150"
+                    HorizontalOptions="Center"
+                    Clicked="Play_Miss_Number_Game_Button" />
+            </StackLayout>
+
+            <BoxView Rotation="-10"
+                Margin="-20,0,-20,-35"
+                Color="{StaticResource shadowColor}"
+                HeightRequest="100"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

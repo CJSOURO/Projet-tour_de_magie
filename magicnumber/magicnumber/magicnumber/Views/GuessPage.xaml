@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:views="clr-namespace:magicnumber.Views"
+             x:Class="magicnumber.Views.GuessPage">
+    <ContentPage.Content>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="auto" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+            <BoxView  Grid.Column="0"
+                Grid.Row="1" 
+                Rotation="-10"
+                Margin="-20,0,-20,-35"
+                Color="{StaticResource shadowColor}"
+                HeightRequest="100" />
+
+            <StackLayout Grid.Row="0" Grid.Column="0" VerticalOptions="Center">
+                <StackLayout Margin="30,10" Spacing="17">
+                    <Label
+                       Text="- Prendre un nombre à 4 chiffres;" 
+                       TextColor="{StaticResource titleColor}" 
+                       FontSize="20" />
+
+                    <Label Text="- Ajoutez les chiffres, pour obtenir un autre nombre;" 
+                       TextColor="{StaticResource titleColor}"
+                       FontSize="20" />
+
+                    <Label Text="- Soustrayez le deuxième nombre du premier;" 
+                       TextColor="{StaticResource titleColor}"
+                       FontSize="20" />
+
+                    <Label Text="- Sélectionnez un des chiffres du nombre obtenue, sauf un zéro;" 
+                       TextColor="{StaticResource titleColor}"
+                       FontSize="20" />
+
+                    <Label Text="- Donnez-moi les autres chifres." 
+                       TextColor="{StaticResource titleColor}"
+                       FontSize="20" />
+                </StackLayout>
+                
+                <Entry Margin="0,30,0,0" x:Name="numberEntry"
+                   BackgroundColor="{StaticResource shadowColor}"
+                   TextColor="White"
+                   PlaceholderColor="White"
+                   Placeholder="Exemple: 123"
+                   WidthRequest="150"
+                   HeightRequest="50"
+                   Keyboard="Numeric"
+                   FontSize="20"
+                   HorizontalTextAlignment="Center"
+                   HorizontalOptions="Center" />
+
+                <Button BackgroundColor="{StaticResource shadowColor}" 
+                    Text="Donner" 
+                    TextColor="White"
+                    WidthRequest="90"
+                    HorizontalOptions="Center"
+                    Clicked="Button_Clicked" />
+            </StackLayout>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>
